@@ -1,20 +1,24 @@
 package manager;
 
 public class Office extends Property implements SecuredAccess {
+
 	/**
 	 * The stored security code.
 	 */
-	private String storedCode = "1234";
-    private int IncorrectAttemps;
+	private String storedCode = "1234";	// TODO:Part2
+
 	
+	// TODO:Part2 add attribute to store number of incorrect attempts
+	private int incorrectAttempts;
+
 
 	//////////////////////////////////////////////////////
 	
 	@Override
 	public void setCode(String code) {
 		
+		// TODO:Part2
 		this.storedCode = code;
-		IncorrectAttemps = 0;
 	}
 
 	@Override
@@ -23,32 +27,37 @@ public class Office extends Property implements SecuredAccess {
 		if (isLockedOut() || !code.equals(storedCode)) {
 			// is locked out, or codes do not match
 			
+			// TODO:Part2 - increment attempts, then return false
+			
+			this.incorrectAttempts = this.incorrectAttempts + 1;
 			return false;
 		}
 
 		// not locked, and codes match
-		
+		this.incorrectAttempts = 0;
 		return true;
 	}
 
 	@Override
-	public void resetToDefault(Object Default) {
+	public void resetToDefault() {
 
-		this.setDefault(Default);
+		// TODO:Part2
+		this.storedCode = "1234";
+		this.incorrectAttempts = 0;
 	}
 
 	@Override
 	public boolean isLockedOut() {
 
 		// TODO:Part2 - check attempts again limit, return true if limit exceeded
-		return true;
+		return this.incorrectAttempts > 5 ? true : false;
 	}
 
 	@Override
 	public int getIncorrectAttempts() {
 
 		// TODO:Part2
-		return -1;
+		return this.incorrectAttempts;
 	}
 	
 	//////////////////////////////////////////////////////
@@ -58,29 +67,5 @@ public class Office extends Property implements SecuredAccess {
 		super(address);
 	}
 
-	public Object getResetToDefault() {
-		return resetToDefault;
-	}
-
-	public void setResetToDefault(Object resetToDefault) {
-		this.resetToDefault = resetToDefault;
-	}
-
-	@Override
-	public void resetToDefault() {
-		storedCode = "1234";
-		IncorrectAttemps = 0;
-		
-	}
-
-	public Object getDefault() {
-		return Default;
-	}
-
-	public void setDefault(Object default1) {
-		Default = default1;
-	}
-
 	
 }
-

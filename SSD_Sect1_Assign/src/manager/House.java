@@ -1,5 +1,6 @@
 package manager;
 
+
 /**
  * A represent a House type {@link Domicile}.
  * 
@@ -7,8 +8,10 @@ package manager;
  */
 public class House extends Domicile {
 
+	// TODO:Part1 - Add missing attributes
 	private int bathrooms;
-	private int receptionrooms;
+	private int receptionRooms; 
+	
 	/**
 	 * A flag indicating whether the house has a garage.
 	 */
@@ -21,15 +24,17 @@ public class House extends Domicile {
 	 */
 	public int getBathrooms() {
 		
-		return bathrooms;
+		// TODO:Part1
+		return this.bathrooms ;
 	}
-	public boolean Garage;
+
 	/**
 	 * @return the number of reception rooms
 	 */
 	public int getReceptionRooms() {
 		
-		return receptionrooms;
+		// TODO:Part1
+		return this.receptionRooms;
 	}
 
 	/**
@@ -37,7 +42,8 @@ public class House extends Domicile {
 	 */
 	public boolean hasGarage() {
 		
-		return hasGarage;
+		// TODO:Part1
+		return this.hasGarage;
 	}
 
 	/**
@@ -55,10 +61,8 @@ public class House extends Domicile {
 		
 		this.hasGarage = hasGarage;
 		
+		// TODO:Part1 set missing attribute values
 		this.bathrooms = bathrooms;
-		
-		this.receptionrooms = receptionRooms;
+		this.receptionRooms = receptionRooms;
 	}
-
-	
 }

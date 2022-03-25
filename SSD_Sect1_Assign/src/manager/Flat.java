@@ -7,11 +7,8 @@ package manager;
  */
 public class Flat extends Domicile {
 
-	/**
-	 * The number of occupants within the flat
-	 */
-		private int occupants;
-	
+	// TODO:Part1 - Add attributes
+	private int occupants;
 	///////////////////////////////////////////////
 	
 	/**
@@ -21,6 +18,7 @@ public class Flat extends Domicile {
 	 */
 	public void setOccupants(int occupants) {
 		
+		// TODO:Part1
 		this.occupants = occupants;
 	}
 	
@@ -29,10 +27,10 @@ public class Flat extends Domicile {
 	 * 
 	 * @return the number of occupants within the flat.
 	 */
-	
 	public int getOccupants() {
-	
-		return occupants;
+		
+		// TODO:Part1
+		return this.occupants;
 	}
 	
 	/**
@@ -44,5 +42,6 @@ public class Flat extends Domicile {
 	public Flat(String addr, int bedrooms) {
 		
 		super(addr, bedrooms);
+		this.occupants = 0;
 	}
 }

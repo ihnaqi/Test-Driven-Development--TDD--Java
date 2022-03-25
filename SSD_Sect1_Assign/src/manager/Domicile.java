@@ -7,31 +7,28 @@ package manager;
  */
 abstract class Domicile extends Property {
 
+	// TODO:Part1 - Add attributes
+	private int bedrooms;
+	private boolean isFurnished;
+
+	////////////////////////////////
+	
 	/**
-	 * The number of bedrooms
-	 */
-		private int bedrooms;
-		
-		/**
-		 *  Flag indicating whether the property is furnished
-		 */
-
-		private String addr;
-
-		/**
 	 * @return the number of bedrooms
 	 */
 	public int getBedrooms() {
 		
-		return bedrooms;	}
+		// TODO:Part1
+		return this.bedrooms;
+	}
 	
 	/**
-	 * @param isFurnished 
 	 * @return true if furnished
 	 */
-	public boolean isFurnished(boolean isFurnished) {
-	
-		return true;
+	public boolean isFurnished() {
+		
+		// TODO:Part1
+		return this.isFurnished;
 	}
 	
 	////////////////////////////////
@@ -46,17 +43,8 @@ abstract class Domicile extends Property {
 
 		super(addr);
 		
+		// TODO:Part1 set attribute values
 		this.bedrooms = bedrooms;
-		this.setAddr(addr);
 	}
-
-	public String getAddr() {
-		return addr;
-	} 
-
-	public void setAddr(String addr) {
-		this.addr = addr;
-	}
-
 
 }

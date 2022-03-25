@@ -10,8 +10,8 @@ public class Guest extends Person {
 	/**
 	 * The guest's card number.
 	 */
-	private String CardNo;
-	
+	// TODO:Part1 - add the card number attribute
+	private String cardNo;
 	////////////////////////////////////////
 	
 	/**
@@ -20,7 +20,8 @@ public class Guest extends Person {
 	 */
 	public String getCardNo() {
 		
-		return CardNo;
+		// TODO:Part1
+		return this.cardNo != null ? this.cardNo : null;
 	}
 	
 	///////////////////////////////////////
@@ -34,8 +35,8 @@ public class Guest extends Person {
 	public Guest(String name, String cardNo) {
 		
 		super(name);
-		this.CardNo = cardNo;
+		
+		// TODO:Part1 - set the card number attribute
+		this.cardNo = cardNo;
 	}
 }
-		
-	

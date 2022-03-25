@@ -8,17 +8,19 @@ package manager;
  */
 abstract class Property {
 
-	/**
-	 * The property address
-	 */
+	// TODO:Part1 - Add attributes
 	private String address;
+	private Tenant tenant;
+	////////////////////////////////////
 	
 	/**
 	 * 
 	 * @return the property address.
 	 */
 	public String getAddress() {
-		return address;
+		
+		// TODO:Part1
+		return this.address != null ? this.address : null;
 	}
 	
 	/**
@@ -28,7 +30,8 @@ abstract class Property {
 	 */
 	public void setTenant(Tenant tenant) {
 		
-		this.setTenant(tenant);
+		// TODO:Part3
+		this.tenant = tenant;
 	}
 	
 	/**
@@ -37,6 +40,7 @@ abstract class Property {
 	public void removeTenant() {
 		
 		// TODO:Part3
+		this.tenant = null;
 	}
 	
 	/**
@@ -45,7 +49,8 @@ abstract class Property {
 	 */
 	public boolean hasTenant() {
 		
-		return true;
+		// TODO:Part3
+		return this.tenant != null ? true : false;
 	}
 	
 	/**
@@ -55,12 +60,8 @@ abstract class Property {
 	 */
 	Property(String address) {
 		
+		// TODO:Part1 - Set attribute
 		this.address = address;
-	}
-
-	public void resetToDefault(Object Default) {
-		// TODO Auto-generated method stub
-		
 	}
 	
 }

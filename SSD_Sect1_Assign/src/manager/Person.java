@@ -8,45 +8,47 @@ package manager;
  */
 abstract class Person {
 
-	public String Addr;
-
+	// TODO:Part1 - Add attributes
+	private String name;
+	private String address;
+	private String phone;
+	private String email;
 	///////////////////////////////////////////////
-	/*
-	 *  Phone 
-	 */
-	public String Phone;
+
 	/**
 	 * @return the home address of the person
 	 */
+	public String getAddr() {
 
-		
-	
-	
-public String emailadress;
+		// TODO:Part1
+		return this.address != null ? this.address : null;
+	}
 
-
-private String Name;
 	/**
 	 * @param addr the home address of the person
-	 * @param Addr 
 	 */
 	public void setAddr(String addr) {
 
-		this.Addr = addr;
+		// TODO:Part1
+		this.address = addr;
 	}
 
 	/**
 	 * @return the phone number of the person
 	 */
 	public String getPhone() {
-		return Phone;
+
+		// TODO:Part1
+		return this.phone != null ? this.phone : null;
 	}
+
 	/**
 	 * @param phone the phone number of the person
-	 * @param Phone 
 	 */
 	public void setPhone(String phone) {
-		this.Phone  = phone;
+
+		// TODO:Part1
+		this.phone = phone;
 	}
 
 	/**
@@ -54,8 +56,8 @@ private String Name;
 	 */
 	public String getEmail() {
 
-		return emailadress;
-		
+		// TODO:Part1
+		return this.email != null ? this.email : null;
 	}
 
 	/**
@@ -63,25 +65,26 @@ private String Name;
 	 */
 	public void setEmail(String email) {
 
-		this.emailadress = email;
+		// TODO:Part1
+		this.email = email;
 	}
 
 	/**
 	 * @return the name of the person
 	 */
 	public String getName() {
-		return Name;
+
+		// TODO:Part1
+		return this.name != null ? this.name : null;
 	}
-public String getAddr() {
-	return Addr;
-}
+
 	/**
-	 * @param setName 
 	 * @param the new name of the person
 	 */
 	public void setName(String name) {
 
-		this.Name = name;
+		// TODO:Part1
+		this.name = name;
 	}
 
 	///////////////////////////////////////////////
@@ -92,9 +95,8 @@ public String getAddr() {
 	 * @param name the name of the person
 	 */
 	Person(String name) {
-		Name = name;
 
-		
+		// TODO:Part1 - Set name attribute
+		this.name = name;
 	}
-
 }
